@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+
+  supervisor:
+    container_name: ss_supervisor
+    image: centos7:sv1 
+    ports:
+      - "9090:9090"
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
