@@ -4,7 +4,7 @@ services:
 
   supervisor:
     container_name: ss_supervisor
-    image: centos7:sv1 
+    build: ./dir 
     ports:
       - "9090:9090"
     volumes:
