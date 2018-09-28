@@ -1,4 +1,4 @@
-FROM centos:7  
+FROM centos:7
 
 MAINTAINER  <admin@vyunwei.com>
 
@@ -22,11 +22,11 @@ RUN \
                   which \
                   jq \
                   rsync \
-		  python-pip && \
+                  python-pip && \
   yum clean all && \
   easy_install supervisor \
   pip install shadowsocks
-    
+
 # Add supervisord conf, bootstrap.sh files
 COPY container-files /
 COPY shadowsocks/shadowsocks.json /data/www/
