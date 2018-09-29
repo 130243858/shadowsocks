@@ -1,5 +1,7 @@
 FROM centos:7
 
+MAINTAINER  <admin@vyunwei.com>
+
 # - Install basic packages (e.g. python-setuptools is required to have python's easy_install)
 # - Install yum-utils so we have yum-config-manager tool available
 # - Install inotify, needed to automate daemon restarts after config file changes

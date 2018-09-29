@@ -4,7 +4,7 @@ services:
 
   supervisor:
     container_name: ss_supervisor
-    build: ./dir 
+    build: ./
     ports:
       - "9090:9090"
     volumes:
