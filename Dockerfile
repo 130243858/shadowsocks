@@ -1,7 +1,5 @@
 FROM centos:7
 
-MAINTAINER  <admin@vyunwei.com>
-
 # - Install basic packages (e.g. python-setuptools is required to have python's easy_install)
 # - Install yum-utils so we have yum-config-manager tool available
 # - Install inotify, needed to automate daemon restarts after config file changes
@@ -16,15 +14,15 @@ RUN \
   yum install -y \
                   iproute \
                   python-setuptools \
+                  python-pip \
                   hostname \
                   inotify-tools \
                   yum-utils \
                   which \
                   jq \
-                  rsync \
-                  python-pip && \
+                  rsync && \
   yum clean all && \
-  easy_install supervisor \
+  easy_install supervisor && \
   pip install shadowsocks
 
 # Add supervisord conf, bootstrap.sh files
